@@ -1,8 +1,17 @@
-name: Hello World
+name: My github-actions
 on: push
+
 jobs:
-  hello-job:
+  just_a_test:
+    
+      runs-on: ubuntu-latest
+      steps:
+
+        - name: Echo to the User
+          run: echo "Hi Pepu"
+
+  bye:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo text
-        run: echo "Hello, world!"
+    - name: Say Goodbye
+      run: echo "Goodbye Sir HOVE"
