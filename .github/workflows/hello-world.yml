@@ -3,15 +3,14 @@ on: push
 
 jobs:
   just_a_test:
-    
-      runs-on: ubuntu-latest
-      steps:
-
-        - name: Echo to the User
-          run: echo "Hi Pepu"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo to the User
+        run: echo "Hi Pepu"
 
   bye:
     runs-on: ubuntu-latest
+    needs: just_a_test  # Define job dependency here
     steps:
-    - name: Say Goodbye
-      run: echo "Goodbye Sir HOVE"
+      - name: Say Goodbye
+        run: echo "Goodbye Sir HOVE"
